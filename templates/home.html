@@ -14,12 +14,17 @@
   </head>
   <body>
     <div class = "container">
-    <h1 class="text-center mt-4 mb-4">Carrer Demo Website</h1>
+    <h1 class="text-center mt-4 mb-4">Demo Carrer Website</h1>
     <img class = "img-fluid" id = "banner" src="https://carrer-demo-website.aleef-bilalbila.repl.co/static/kanna.jpeg" height='320' width='680'>
     <h2 class="text-center" >About our Company</h2>
     <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
     <h2 class="text-center">Open Positions</h2>
-    <p class="lead text-center" > To Do, I'm back.</p>
+    <p class="lead text-center" > 
+    {% for job in jobs %}
+      <div> {{job['title']}} </div>
+    {% endfor %}  
+        
+    </p>
       <div class="text-center">
     <button type="button" class="btn btn-outline-success btn-lg text-center">Submit</button>
       </div>
