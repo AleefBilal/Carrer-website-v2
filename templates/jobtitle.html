@@ -1,8 +1,17 @@
-   <div style = "margin-bottom: 10px; margin-top: 6px"> 
-        <h4 style = "color: rgb(120, 120, 120); margin-bottom:4px">{{job['title']}}</h4> </div>
+   <div class="border-bottom row " style = "margin-bottom: 10px; margin-top: 6px;  padding-bottom: 4px"> 
+      <div class="col-9">
+        <h4 style = "color: rgb(120, 120, 120); margin-bottom:4px">{{job['title']}}</h4> 
       <div>
         <b> Locaiton: </b>{{job['Location']}} </div>
       <div>
         {% if 'Salary' in job %}
-        <b>Salary: {{job['Salary']}}</b> </div>
+        <b>Salary: {{job['Salary']}}</b>
         {% endif %}
+         </div>
+      </div>
+     <div class= "col-3">
+      <button type="button" class="btn btn-outline-primary" style="margin-top: 10px" > Apply </button>
+   </div>
+   </div>
+
+     
