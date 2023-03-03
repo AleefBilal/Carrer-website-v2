@@ -21,7 +21,7 @@
     <h2 class="text-center">Open Positions</h2>
     <p class="lead text-center" > 
     {% for job in jobs %}
-      <div> {{job['title']}} </div>
+      {% include 'jobtitle.html' %}
     {% endfor %}  
         
     </p>
