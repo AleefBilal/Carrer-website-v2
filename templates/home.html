@@ -13,11 +13,23 @@
     </style>
   </head>
   <body>
+
+    {% include'navbar.html' %}
     <div class = "container">
     <h1 class="text-center mt-4 mb-4">Demo Carrer Website</h1>
-    <img class = "img-fluid" id = "banner" src="https://carrer-demo-website.aleef-bilalbila.repl.co/static/kanna.jpeg" height='320' width='680'>
+            <img class = "img-fluid" id = "banner" src="https://carrer-demo-website.aleef-bilalbila.repl.co/static/ere.jpg" height=100% width=auto>
+   
+  
+ 
     <h2 class="text-center" >About our Company</h2>
+      <div class= "row mb-4 mt-4">
+        <div class="col-md-6">
     <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+          <img src="/static/kanna.jpeg" style="height:320px; border-radius:4px">
+        </div>
+      </div>
     <h2 class="text-center">Open Positions</h2>
     <p class="lead text-center" > 
     {% for job in jobs %}
@@ -26,10 +38,11 @@
         
     </p>
       <div class="text-center">
-    <button type="button" class="btn btn-outline-success btn-lg text-center">Contact us</button>
-       <p class= "mt-4">Al-Markhor group pvt ltd. All rigths reserved 2023</p>
+    <a href="mailto:carrersai@gmail.com?subject=Question%20about%20job%20Carreres&body=My%20Name%20%3A%20%3CYour%20name%20here%3E%0D%0AMy%20Portfolio%20%3A%20%3CYour%20Portfolio%20link%20here%3E%0D%0AMy%20LinkedIn%20Profile%20%3A%20%3CYour%20LinkedIn%20Profile%20link%20here%3E%0D%0AYour%20Question%20%3A%20%3CYour%20question%20here%3E" type="button" class="btn btn-outline-success btn-lg text-center">Contact us</a>
+      
       </div>
      
       </div>
+  {% include'footer.html' %}
   </body>
 </html>
