@@ -1,11 +1,13 @@
    <div class="border-bottom row " style = "margin-bottom: 10px; margin-top: 6px;  padding-bottom: 4px"> 
       <div class="col-10">
-        <h4 style = "color: rgb(120, 120, 120); margin-bottom:4px">{{job['title']}}</h4> 
+        <h4 style = "color: rgb(120, 120, 120); margin-bottom:4px">{{job['title'] | upper}}</h4> 
       <div>
-        <b> Locaiton: </b>{{job['Location']}} </div>
+        <b> Locaiton: </b>{{job['location'] | upper }} </div>
       <div>
-        {% if 'Salary' in job %}
-        <b>Salary: {{job['Salary']}}</b>
+        {% if 'salary' in job %}
+        <b>Salary: {{job['salary']}}</b>
+        <br>
+        Currency: <b>{{job['currency']}}</b>
         {% endif %}
          </div>
       </div>

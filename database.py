@@ -6,11 +6,14 @@ engine = create_engine(db_connect,
                        connect_args={"ssl": {
                          "ssl_ca": "/etc/ssl/cert.pem"
                        }})
-with engine.connect() as connection:
-  result = connection.execute(text("select * from jobs"))
-  result_all = result.fetchall()
 
-  result_lt = []
-  for row in result_all:
-    result_lt.append(dict(zip(result.keys(), row)))
-  print(result_lt)
+
+def load_jobs():
+  with engine.connect() as connection:
+    result = connection.execute(text("select * from jobs"))
+    result_all = result.fetchall()
+
+    jobs = []
+    for row in result_all:
+      jobs.append(dict(zip(result.keys(), row)))
+  return jobs
