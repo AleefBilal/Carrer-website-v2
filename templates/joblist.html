@@ -8,15 +8,11 @@
   </head>
   <body>
     {% include'navbar.html' %}
-    <style>
-      #banner{
-        height: 360px;
-        width: 100%;
-      }
-    </style>
+    <img class = "img-fluid" id = "banner" src="/static/ere.jpeg" height=100% width=auto>
+    
     <div class = "container">
     <h1 class="text-center mt-4 mb-4">Demo Carrer Website</h1>
-            <img class = "img-fluid" id = "banner" src="/static/ere.jpg" height=100% width=auto>
+            
     <h3>Title</h3>
     <p>{{jobs.title}}</p>
     <h3>Salary</h3>
@@ -29,9 +25,10 @@
     <p>{{jobs.reponsibilites}}</p>
     <h3>Currency</h3>
     <p>{{jobs.currency}}</p>
+    {% include 'app_form.html' %}
     
-    
-    <a href="mailto:carrersai@gmail.com?subject=Apply%20for%20job%20{{jobs['title']}}&body=My%20Name%20%3A%20%3CYour%20name%20here%3E%0D%0AMy%20Portfolio%20%3A%20%3CYour%20Portfolio%20link%20here%3E%0D%0AMy%20Linkedin%20Profile%20%3A%20%3CYour%20Linkedin%20Profile%20link%20here%3E" type="button" class="btn btn-outline-primary" style="display: block; margin: 0 auto; margin-top: 10px; max-width: 250px; " > Apply </a>
+    <div class="mb-6">
+    <a href="mailto:carrersai@gmail.com?subject=Apply%20for%20job%20{{jobs['title']}}&body=My%20Name%20%3A%20%3CYour%20name%20here%3E%0D%0AMy%20Portfolio%20%3A%20%3CYour%20Portfolio%20link%20here%3E%0D%0AMy%20Linkedin%20Profile%20%3A%20%3CYour%20Linkedin%20Profile%20link%20here%3E" type="button" class="btn btn-outline-primary" style="display: block; margin: 0 auto; margin-top: 10px; max-width: 250px; " > Contact Us </a>
     </div>
     {% include'footer.html' %}
   </body>
